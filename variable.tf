@@ -1,3 +1,3 @@
 variable "bucketname" {
-    default = "s3bucket_terraformwebsite"
+    default = "s3bucket-terraformwebsite"
 }
