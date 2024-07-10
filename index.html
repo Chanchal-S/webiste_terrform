@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#exercise">Exercise</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to Your Fitness Journey</h1>
+        <img src="images/fitness_home.jpg" alt="Fitness Home">
+        <p>Join us to achieve your fitness goals with the best exercises and routines.</p>
+    </section>
+    <section id="login">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <section id="exercise">
+        <h2>Exercise Routines</h2>
+        <img src="images/exercise.jpg" alt="Exercise">
+        <p>Explore a variety of exercises to keep you fit and healthy.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style>
+</body>
+</html>

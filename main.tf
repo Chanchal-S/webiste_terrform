@@ -38,3 +38,6 @@ resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.mybucket.id
   acl    = "public-read"
 }
+
+# s3 website configuration
+
