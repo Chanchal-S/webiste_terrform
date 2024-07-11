@@ -39,5 +39,36 @@ resource "aws_s3_bucket_acl" "example" {
   acl    = "public-read"
 }
 
+# s3 objects
+
+resource "aws_s3_object" "index" {
+  key    = "index.html"
+  bucket = aws_s3_bucket.mybucket.id
+  source = "index.html"
+  acl    = "public-read"
+  content_type = "text/html"
+}
+
+resource "aws_s3_object" "error" {
+  key    = "error.html"
+  bucket = aws_s3_bucket.mybucket.id
+  source = "error.html"
+  acl    = "public-read"
+  content_type = "text/html"
+}
+
 # s3 website configuration
 
+resource "aws_s3_bucket_website_configuration" "mybucket" {
+  bucket = aws_s3_bucket.mybucket.id
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
+
+  depends_on = [ aws_s3_bucket.mybucket ]
+}
